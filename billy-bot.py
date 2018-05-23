@@ -9,8 +9,6 @@ import asyncio # await, async function
 import random # RNG generator
 import libs.billy_functions # importing other billy function
 
-api = str(os.environ.get("RIOT_KEY"))
-
 client = discord.Client()
 
 @client.event # Logging to discord server
