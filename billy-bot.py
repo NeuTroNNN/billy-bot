@@ -50,6 +50,7 @@ async def on_message(message): # Checks users message
 
 	elif message.content.startswith("!slave") or message.content.startswith("!quote"):
 		result = random.choice(open("voicelines").readlines())
+		result = "\"" + result + "\""
 		await client.send_message(message.channel, result)
 
 client.run(os.getenv("BOT_TOKEN"))
