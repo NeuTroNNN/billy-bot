@@ -8,6 +8,7 @@ import discord # Discord API
 import asyncio # await, async function
 import random # RNG generator
 import libs.billy_functions # importing other billy function
+import os
 
 client = discord.Client()
 
@@ -47,4 +48,4 @@ async def on_message(message): # Checks users message
 		result = random.randint(0,32768)
 		await client.send_message(message.channel, result)
 
-client.run("BOT_TOKEN")
+client.run(os.getenv("BOT_TOKEN"))
