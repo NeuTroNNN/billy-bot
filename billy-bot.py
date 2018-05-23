@@ -35,7 +35,7 @@ async def on_message(message): # Checks users message
 
 	elif message.content.startswith("!pick"): # User selected pick -- billy answers random word from users input
 		result = message.content[5:]
-		result = billy_functions.get_word(result)
+		result = libs.billy_functions.get_word(result)
 		await client.send_message(message.channel, result)
 
 	elif message.content.startswith("!roll"): # User selected roll -- billy answers random number from 0 to number #max
