@@ -1,0 +1,14 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "yungbender"]
+	url = https://github.com/yungbender/billy-bot
+	fetch = +refs/heads/*:refs/remotes/yungbender/*
+[remote "origin"]
+	url = https://github.com/yungbender/billy-bot.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
