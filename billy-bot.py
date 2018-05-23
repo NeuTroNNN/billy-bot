@@ -47,4 +47,4 @@ async def on_message(message): # Checks users message
 		result = random.randint(0,32768)
 		await client.send_message(message.channel, result)
 
-bot.run("BOT_TOKEN")
+client.run(BOT_TOKEN)
