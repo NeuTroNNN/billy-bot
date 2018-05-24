@@ -41,9 +41,10 @@ async def on_message(message): # Checks users message
 
 	elif message.content.startswith("!roll"): # User selected roll -- billy answers random number from 0 to number #max
 		max = message.content[5:]
-		max = int(max)
-
+		
 		x = max.isnumeric()
+
+		max = int(max)
 
 		if x == False:
 			return
