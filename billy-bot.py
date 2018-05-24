@@ -41,13 +41,8 @@ async def on_message(message): # Checks users message
 
 	elif message.content.startswith("!roll"): # User selected roll -- billy answers random number from 0 to number #max
 		max = message.content[5:]
-		
-		x = max.isnumeric()
 
 		max = int(max)
-
-		if x == False:
-			return
 
 		result = random.randint(0,max)
 		await client.send_message(message.channel, result)
