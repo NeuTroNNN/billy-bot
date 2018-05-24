@@ -45,7 +45,7 @@ async def on_message(message): # Checks users message
 
 		x = max.isnumeric()
 
-		if x = False:
+		if x == False:
 			return
 
 		result = random.randint(0,max)
