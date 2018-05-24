@@ -26,21 +26,28 @@ async def on_message(message): # Checks users message
 		result = random.choice([True, False])
 		await client.send_message(message.channel, result)
 
-	#elif message.content.startswith("!quote"): # User selected quote
-		#result = random.
-
 	elif message.content.startswith("!introduce") or message.content.startswith("!help") or message.content.startswith("!commands"): # User selected help message
 		result = "```	\t\t\tMy name is Billy Herrington, aniki. (BILLY-BOT 0.1 Alpha)\nCommands: \n\t!flip - returns true or false for question \n\t!pick - picks one word from your input \n\t!quote - like embarrassing me huh? \n\t\tMade by YungBender#7283	\nTHANK YOU SIR \n ```"
 		await client.send_message(message.channel, result)
 
 	elif message.content.startswith("!pick"): # User selected pick -- billy answers random word from users input
 		result = message.content[5:]
+
+		if result == "":
+			return
+
 		result = libs.billy_functions.get_word(result)
 		await client.send_message(message.channel, result)
 
 	elif message.content.startswith("!roll"): # User selected roll -- billy answers random number from 0 to number #max
 		max = message.content[5:]
 		max = int(max)
+
+		x = max.isnumeric()
+
+		if x = False:
+			return
+
 		result = random.randint(0,max)
 		await client.send_message(message.channel, result)
 
@@ -48,7 +55,7 @@ async def on_message(message): # Checks users message
 		result = random.randint(0,32768)
 		await client.send_message(message.channel, result)
 
-	elif message.content.startswith("!slave") or message.content.startswith("!quote"):
+	elif message.content.startswith("!slave") or message.content.startswith("!quote"): # User selected quote -- billy answers random gachi quote from database #voicelines
 		result = random.choice(open("voicelines").readlines())
 		await client.send_message(message.channel, result)
 
